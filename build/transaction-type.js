@@ -2,7 +2,7 @@
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-var transactionType = function transactionType(tx, targetAddress, isKomodo, options) {
+var transactionType = function transactionType(tx, targetAddress, isSafecoin, options) {
   // TODO: - sum vins / sum vouts to the same address
   //       - multi vin multi vout
   //       - detect change address
@@ -97,7 +97,7 @@ var transactionType = function transactionType(tx, targetAddress, isKomodo, opti
         confirmations: tx.confirmations
       };
 
-      if (isKomodo) {
+      if (isSafecoin) {
         // calc claimed interest amount
         var vinVoutDiff = _total.inputs - _total.outputs;
 
@@ -108,7 +108,7 @@ var transactionType = function transactionType(tx, targetAddress, isKomodo, opti
     } else {
       result = {
         type: 'sent',
-        amount: Number(isKomodo && _sum.inputs - _sum.outputs < 0 ? _total.outputs - _sum.outputs : _sum.inputs - _sum.outputs).toFixed(8),
+        amount: Number(isSafecoin && _sum.inputs - _sum.outputs < 0 ? _total.outputs - _sum.outputs : _sum.inputs - _sum.outputs).toFixed(8),
         amountIn: Number(_sum.inputs).toFixed(8),
         amountOut: Number(_sum.outputs).toFixed(8),
         totalIn: Number(_total.inputs).toFixed(8),
@@ -122,7 +122,7 @@ var transactionType = function transactionType(tx, targetAddress, isKomodo, opti
         to: _addresses.outputs
       };
 
-      if (isKomodo) {
+      if (isSafecoin) {
         // calc claimed interest amount
         var _vinVoutDiff = _total.inputs - _total.outputs;
 
@@ -164,7 +164,7 @@ var transactionType = function transactionType(tx, targetAddress, isKomodo, opti
       outputAddresses: _addresses.outputs
     };
 
-    if (isKomodo) {
+    if (isSafecoin) {
       // calc claimed interest amount
       var _vinVoutDiff2 = _total.inputs - _total.outputs;
 

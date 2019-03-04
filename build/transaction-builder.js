@@ -90,7 +90,7 @@ var transaction = function transaction(sendTo, changeAddress, wif, network, utxo
       }
     }
 
-    if (network.kmdInterest) {
+    if (network.safeInterest) {
       var _locktime = Math.floor(Date.now() / 1000) - 777;
       tx.setLockTime(_locktime);
     }
@@ -148,7 +148,7 @@ var data = function data(network, value, fee, outputAddress, changeAddress, utxo
         verified: utxoList[i].verified ? utxoList[i].verified : false
       };
 
-      if (network.kmdInterest) {
+      if (network.safeInterest) {
         _utxo.interestSats = Number(utxoList[i].interestSats || utxoList[i].interest || 0);
       }
 
@@ -234,8 +234,8 @@ var data = function data(network, value, fee, outputAddress, changeAddress, utxo
       }
     }
 
-    // account for KMD interest
-    if (network.kmdInterest && totalInterest > 0) {
+    // account for SAFE interest
+    if (network.safeInterest && totalInterest > 0) {
       // account for extra vout
 
       if (_maxSpendBalance - fee === value) {
@@ -249,7 +249,7 @@ var data = function data(network, value, fee, outputAddress, changeAddress, utxo
         _change += totalInterest;
       }
 
-      // double check kmd interest is combined into 1 output
+      // double check safe interest is combined into 1 output
       if (outputAddress === changeAddress && _change > 0) {
         value += _change - fee;
 

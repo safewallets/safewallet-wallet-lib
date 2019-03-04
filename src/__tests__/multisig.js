@@ -6,15 +6,15 @@ const { transaction } = require('./src/transaction-builder');
 
 // TODO: add proper asserts
 
-const kp1 = keys.stringToWif('test1', network.kmd, true);
-const kp2 = keys.stringToWif('test2', network.kmd, true);
+const kp1 = keys.stringToWif('test1', network.safe, true);
+const kp2 = keys.stringToWif('test2', network.safe, true);
 const msigData = keys.msigAddress(
   2,
   [
     kp1.pubHex,
     kp2.pubHex,
   ],
-  network.kmd
+  network.safe
 );
 
 // create tx
@@ -48,7 +48,7 @@ const signedTx = transaction(
   data.outputAddress,
   data.changeAddress,
   data.wif,
-  network.kmd,
+  network.safe,
   data.utxo,
   data.change,
   data.value,
@@ -63,7 +63,7 @@ const signedTxComplete = transaction(
   data.outputAddress,
   data.changeAddress,
   kp2.priv,
-  network.kmd,
+  network.safe,
   data.utxo,
   data.change,
   data.value,
@@ -78,7 +78,7 @@ const signedTxComplete = transaction(
 
 // console.log(signedTxComplete);
 
-test('src - transaction-builder - kmd multisig tx', async (t) => {
+test('src - transaction-builder - safe multisig tx', async (t) => {
   t.plan(1);
   t.equal(true, true);
 });

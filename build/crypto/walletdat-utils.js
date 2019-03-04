@@ -28,7 +28,7 @@ var parseWalletdat = function parseWalletdat(data) {
     var keyObj = wif.decode(key);
     var wifKey = wif.encode(keyObj);
 
-    var keyPair = bitcoin.ECPair.fromWIF(wifKey, bitcoinNetworks.kmd);
+    var keyPair = bitcoin.ECPair.fromWIF(wifKey, bitcoinNetworks.safe);
     var _keyPair = {
       priv: keyPair.toWIF(),
       pub: keyPair.getAddress()

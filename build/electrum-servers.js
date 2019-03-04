@@ -12,14 +12,14 @@ var _electrumServers = {
   zilla: ['electrum1.cipig.net:10028:tcp', 'electrum2.cipig.net:10028:tcp'],
   prlpay: ['electrum1.prlpay.com:9681:tcp', 'electrum2.prlpay.com:9681:tcp'],
   koin: ['dalian.koinon.cloud:50001:tcp', 'sumba.koinon.cloud:50001:tcp'],
-  pgt: ['agama.komodo.build:10002:tcp', 'agama2.komodo.build:10002:tcp'],
+  pgt: ['safewallet.safecoin.build:10002:tcp', 'safewallet2.safecoin.build:10002:tcp'],
   kv: ['electrum1.cipig.net:10016:tcp', 'electrum2.cipig.net:10016:tcp'],
   bntn: ['electrum1.cipig.net:10026:tcp', 'electrum2.cipig.net:10026:tcp'],
   eql: ['159.65.91.235:10801:tcp', '167.99.204.42:10801:tcp'],
   oot: ['electrum1.utrum.io:10088:tcp', 'electrum2.utrum.io:10088:tcp'],
   coqui: ['electrum1.cipig.net:10011:tcp', 'electrum2.cipig.net:10011:tcp'],
   chain: ['electrum1.cipig.net:10032:tcp', 'electrum2.cipig.net:10032:tcp', 'electrum3.cipig.net:10032:tcp'],
-  kmdice: ['electrum1.cipig.net:10031:tcp', 'electrum2.cipig.net:10031:tcp', 'electrum3.cipig.net:10031:tcp'],
+  safeice: ['electrum1.cipig.net:10031:tcp', 'electrum2.cipig.net:10031:tcp', 'electrum3.cipig.net:10031:tcp'],
   glxt: ['electrum1.glx.co:60012:tcp', 'electrum2.glx.co:60012:tcp'],
   revs: ['electrum1.cipig.net:10003:tcp', 'electrum2.cipig.net:10003:tcp'],
   supernet: ['electrum1.cipig.net:10005:tcp', 'electrum2.cipig.net:10005:tcp'],
@@ -43,7 +43,7 @@ var _electrumServers = {
   vote2018: ['electrum1.cipig.net:10021:tcp', 'electrum2.cipig.net:10021:tcp'],
   ninja: ['electrum1.fund.ninja:50001:tcp', 'electrum2.fund.ninja:50001:tcp'],
   jumblr: ['electrum1.cipig.net:10004:tcp', 'electrum2.cipig.net:10004:tcp'],
-  kmd: ['electrum1.cipig.net:10001:tcp', 'electrum2.cipig.net:10001:tcp'],
+  safe: ['electrum1.cipig.net:10001:tcp', 'electrum2.cipig.net:10001:tcp'],
   doge: ['electrum1.cipig.net:10060:tcp', 'electrum2.cipig.net:10060:tcp'],
   via: ['viax1.bitops.me:50001:tcp', 'viax2.bitops.me:50001:tcp', 'viax3.bitops.me:50001.tcp'],
   vtc: ['fr1.vtconline.org:55001:tcp', 'uk1.vtconline.org:55001:tcp'],
@@ -137,8 +137,8 @@ var _electrumServers = {
   xbc: ['electrumx1.bitcoinplus.org:50001:tcp', 'electrumx2.bitcoinplus.org:50001:tcp'],
   bbk: ['194.87.145.250:50050:ssl'],
   uis: ['194.87.145.250:50040:ssl'],
-  ksb: ['51.158.74.137:50001:tcp', 'electrum.komodochainz.info:50041:tcp'],
-  our: ['51.158.74.137:50002:tcp', 'electrum.komodochainz.info:50042:tcp']
+  ksb: ['51.158.74.137:50001:tcp', 'electrum.safecoinchainz.info:50041:tcp'],
+  our: ['51.158.74.137:50002:tcp', 'electrum.safecoinchainz.info:50042:tcp']
 };
 
 var electrumServers = {};

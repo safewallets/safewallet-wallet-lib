@@ -1,5 +1,5 @@
 const dpowCoins = [
-  'KMD',
+  'SAFE',
   'SUPERNET',
   'REVS',
   'PANGEA',
@@ -37,7 +37,7 @@ const dpowCoins = [
   'PIRATE',
   'KOIN',
   'DION',
-  'KMDICE',
+  'SAFEICE',
   'PTX',
   'ZEX',
   'OUR',

@@ -136,7 +136,7 @@ const bip44Const = {
   'SBTC': 137,
   'RPT': 139,
   'LBC': 140,
-  'KMD': 141,
+  'SAFE': 19165,
   'BSQ': 142,
   'RIC': 143,
   'XRP': 144,

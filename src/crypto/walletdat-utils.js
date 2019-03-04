@@ -22,7 +22,7 @@ const parseWalletdat = (data) => {
     const keyObj = wif.decode(key);
     const wifKey = wif.encode(keyObj);
 
-    const keyPair = bitcoin.ECPair.fromWIF(wifKey, bitcoinNetworks.kmd);
+    const keyPair = bitcoin.ECPair.fromWIF(wifKey, bitcoinNetworks.safe);
     const _keyPair = {
       priv: keyPair.toWIF(),
       pub: keyPair.getAddress(),

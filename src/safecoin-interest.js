@@ -1,8 +1,8 @@
 // TODO: tiptime != 0 && nLockTime < tiptime
-const KOMODO_ENDOFERA = 7777777;
+const SAFECOIN_ENDOFERA = 7777777;
 const LOCKTIME_THRESHOLD = 500000000;
 
-const komodoInterest = (locktime, value, height, inSats) => { // value in sats, inSats - return output in sats
+const safecoinInterest = (locktime, value, height, inSats) => { // value in sats, inSats - return output in sats
   const timestampDiff = Math.floor(Date.now() / 1000) - locktime - 777;
   const hoursPassed = Math.floor(timestampDiff / 3600);
   const minutesPassed = Math.floor((timestampDiff - (hoursPassed * 3600)) / 60);
@@ -11,7 +11,7 @@ const komodoInterest = (locktime, value, height, inSats) => { // value in sats, 
   let interest = 0;
 
   // calc interest
-  if (height < KOMODO_ENDOFERA &&
+  if (height < SAFECOIN_ENDOFERA &&
       locktime >= LOCKTIME_THRESHOLD) {
     if (timestampDiffMinutes >= 60) {
       if (height >= 1000000 &&
@@ -36,4 +36,4 @@ const komodoInterest = (locktime, value, height, inSats) => { // value in sats, 
   return interest;
 };
 
-module.exports = komodoInterest;
+module.exports = safecoinInterest;

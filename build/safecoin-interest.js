@@ -1,10 +1,10 @@
 "use strict";
 
 // TODO: tiptime != 0 && nLockTime < tiptime
-var KOMODO_ENDOFERA = 7777777;
+var SAFECOIN_ENDOFERA = 7777777;
 var LOCKTIME_THRESHOLD = 500000000;
 
-var komodoInterest = function komodoInterest(locktime, value, height, inSats) {
+var safecoinInterest = function safecoinInterest(locktime, value, height, inSats) {
   // value in sats, inSats - return output in sats
   var timestampDiff = Math.floor(Date.now() / 1000) - locktime - 777;
   var hoursPassed = Math.floor(timestampDiff / 3600);
@@ -14,7 +14,7 @@ var komodoInterest = function komodoInterest(locktime, value, height, inSats) {
   var interest = 0;
 
   // calc interest
-  if (height < KOMODO_ENDOFERA && locktime >= LOCKTIME_THRESHOLD) {
+  if (height < SAFECOIN_ENDOFERA && locktime >= LOCKTIME_THRESHOLD) {
     if (timestampDiffMinutes >= 60) {
       if (height >= 1000000 && timestampDiffMinutes > 31 * 24 * 60) {
         timestampDiffMinutes = 31 * 24 * 60;
@@ -37,4 +37,4 @@ var komodoInterest = function komodoInterest(locktime, value, height, inSats) {
   return interest;
 };
 
-module.exports = komodoInterest;
+module.exports = safecoinInterest;

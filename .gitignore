@@ -42,7 +42,7 @@ Thumbs.db
 
 # Others
 .npmrc
-agamalib.js
+safewalletlib.js
 coverage
 
 package-lock

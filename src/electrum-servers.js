@@ -29,8 +29,8 @@ let _electrumServers = {
     'sumba.koinon.cloud:50001:tcp',
   ],
   pgt: [
-    'agama.komodo.build:10002:tcp',
-    'agama2.komodo.build:10002:tcp',
+    'safewallet.safecoin.build:10002:tcp',
+    'safewallet2.safecoin.build:10002:tcp',
   ],
   kv: [
     'electrum1.cipig.net:10016:tcp',
@@ -57,7 +57,7 @@ let _electrumServers = {
     'electrum2.cipig.net:10032:tcp',
     'electrum3.cipig.net:10032:tcp',
   ],
-  kmdice: [
+  safeice: [
     'electrum1.cipig.net:10031:tcp',
     'electrum2.cipig.net:10031:tcp',
     'electrum3.cipig.net:10031:tcp',
@@ -142,7 +142,7 @@ let _electrumServers = {
     'electrum1.cipig.net:10004:tcp',
     'electrum2.cipig.net:10004:tcp',
   ],
-  kmd: [
+  safe: [
     'electrum1.cipig.net:10001:tcp',
     'electrum2.cipig.net:10001:tcp',
   ],
@@ -504,11 +504,11 @@ let _electrumServers = {
   ],
   ksb: [
     '51.158.74.137:50001:tcp',
-    'electrum.komodochainz.info:50041:tcp',
+    'electrum.safecoinchainz.info:50041:tcp',
   ],
   our: [
     '51.158.74.137:50002:tcp',
-    'electrum.komodochainz.info:50042:tcp',
+    'electrum.safecoinchainz.info:50042:tcp',
   ],
 };
 

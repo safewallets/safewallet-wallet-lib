@@ -2,7 +2,7 @@
   Bitcoinjs-lib network params file
 */
 
-// TODO: runtime extend for kmd assets
+// TODO: runtime extend for safe assets
 // wifAlt can be used for different coin versions that underwent major code base changes
 // this is an experimental option that can lead to key pair derivation errors
 const bitcoin = require('bitcoinjs-lib');
@@ -98,9 +98,9 @@ const networks = {
     dustThreshold: 1000, // https://github.com/zcoinofficial/zcoin/blob/f755f95a036eedfef7c96bcfb6769cb79278939f/src/main.h#L59,
     isZcash: true,
   },
-  // https://raw.githubusercontent.com/jl777/komodo/beta/src/chainparams.cpp
-  kmd: {
-    messagePrefix: '\x19Komodo Signed Message:\n',
+  // https://raw.githubusercontent.com/jl777/safecoin/beta/src/chainparams.cpp
+  safe: {
+    messagePrefix: '\x19Safecoin Signed Message:\n',
     bip44: 141,
     bip32: {
       public: 0x0488b21e,
@@ -119,10 +119,10 @@ const networks = {
     isZcash: true,
     sapling: true,
     saplingActivationTimestamp: 1544835600,
-    kmdInterest: true,
+    safeInterest: true,
   },
   vrsc: {
-    messagePrefix: '\x19Komodo Signed Message:\n',
+    messagePrefix: '\x19Safecoin Signed Message:\n',
     bip44: 141,
     bip32: {
       public: 0x0488b21e,
@@ -143,7 +143,7 @@ const networks = {
     saplingActivationHeight: 227520,
   },
   oot: {
-    messagePrefix: '\x19Komodo Signed Message:\n',
+    messagePrefix: '\x19Safecoin Signed Message:\n',
     bip44: 141,
     bip32: {
       public: 0x0488b21e,
@@ -164,7 +164,7 @@ const networks = {
     saplingActivationHeight: 5000000,
   },
   zilla: {
-    messagePrefix: '\x19Komodo Signed Message:\n',
+    messagePrefix: '\x19Safecoin Signed Message:\n',
     bip44: 141,
     bip32: {
       public: 0x0488b21e,
@@ -185,7 +185,7 @@ const networks = {
     saplingActivationHeight: 5000000,
   },
   spltest: {
-    messagePrefix: '\x19Komodo Signed Message:\n',
+    messagePrefix: '\x19Safecoin Signed Message:\n',
     bip44: 141,
     bip32: {
       public: 0x0488b21e,

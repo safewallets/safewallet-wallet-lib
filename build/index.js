@@ -9,7 +9,7 @@ var time = require('./time');
 var crypto = require('./crypto');
 var utils = require('./utils');
 var keys = require('./keys');
-var komodoInterest = require('./komodo-interest');
+var safecoinInterest = require('./safecoin-interest');
 var transactionBuilder = require('./transaction-builder');
 var transactionType = require('./transaction-type');
 var getMerkleRoot = require('./transaction-merkle');
@@ -25,7 +25,7 @@ module.exports = {
   time: time,
   crypto: crypto,
   utils: utils,
-  komodoInterest: komodoInterest,
+  safecoinInterest: safecoinInterest,
   transactionBuilder: transactionBuilder,
   transactionType: transactionType,
   getMerkleRoot: getMerkleRoot,

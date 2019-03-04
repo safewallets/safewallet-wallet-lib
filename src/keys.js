@@ -366,7 +366,7 @@ const getAddressVersion = (address) => {
       if (_b58check.version === bitcoinjsNetworks[key].pubKeyHash ||
           _b58check.version === bitcoinjsNetworks[key].scriptHash) {
         if (key !== 'vrsc' &&
-            key !== 'komodo') {
+            key !== 'safecoin') {
           _items.push(key);
         }
       }

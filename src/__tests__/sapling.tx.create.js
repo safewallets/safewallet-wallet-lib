@@ -52,17 +52,17 @@ const signedTxSaplingVRSC = transaction(
 
 const decodedTxSaplingVRSC = txDecoder(signedTxSaplingVRSC, verusParams);
 
-const signedTxSaplingKmd = transaction(
+const signedTxSaplingSafe = transaction(
   data.outputAddress,
   data.changeAddress,
   data.wif,
-  networks.kmd,
+  networks.safe,
   data.utxo,
   data.change,
   data.value
 );
 
-const decodedTxSaplingKmd = txDecoder(signedTxSaplingKmd, networks.kmd);
+const decodedTxSaplingSafe = txDecoder(signedTxSaplingSafe, networks.safe);
 
 test('src - transaction-builder - vrsc regular tx', async (t) => {
   t.plan(1);
@@ -74,7 +74,7 @@ test('src - transaction-builder - vrsc sapling tx', async (t) => {
   t.equal(decodedTxSaplingVRSC.tx.version, 4);
 });
 
-test('src - transaction-builder - kmd regular tx', async (t) => {
+test('src - transaction-builder - safe regular tx', async (t) => {
   t.plan(1);
-  t.equal(decodedTxSaplingKmd.tx.version, 1);
+  t.equal(decodedTxSaplingSafe.tx.version, 1);
 });
