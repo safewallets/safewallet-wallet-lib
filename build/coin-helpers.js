@@ -19,7 +19,7 @@ var isSafecoinCoin = function isSafecoinCoin(coin, skipSAFE) {
 
 // TODO: add at least 2 explorers per coin
 var explorerList = (_explorerList = {
-  SAFE: 'https://www.safeexplorer.io',
+  SAFE: 'https://explorer.safecoin.org',
   // SAFE asset chains
   DION: 'https://explorer.dionpay.com',
   KOIN: 'http://live.block.koinon.cloud',

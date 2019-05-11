@@ -65,7 +65,7 @@ const isSafecoinCoin = (coin, skipSAFE) => (_safecoinCoins.find((element) => {
 
 // TODO: add at least 2 explorers per coin
 const explorerList = {
-  SAFE: 'https://www.safeexplorer.io',
+  SAFE: 'https://explorer.safecoin.org',
   // SAFE asset chains
   DION: 'https://explorer.dionpay.com',
   KOIN: 'http://live.block.koinon.cloud',
